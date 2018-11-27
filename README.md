@@ -1,10 +1,10 @@
 # useful-tips
 
-##### How to install tensorflow on Python 3.7:
+### How to install tensorflow on Python 3.7:
 ```
-pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py3-none-any.whl
+pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
-##### How to remove Anaconda3
+### How to remove Anaconda3
 1. remove config
 ```
 conda install anaconda-clean
