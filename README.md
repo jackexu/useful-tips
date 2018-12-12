@@ -36,3 +36,24 @@ rm -rf ~/Library/Receipts/io.continuum.pkg.anaconda.bom
 rm -rf ~/Library/Receipts/io.continuum.pkg.anaconda.plist
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
+
+### How to remove PyCharm
+1. Configuration (idea.config.path):
+```
+~/Library/Preferences/<PRODUCT><VERSION>
+```
+  
+2. Caches (idea.system.path):
+```
+~/Library/Caches/<PRODUCT><VERSION>
+```
+  
+3. Plugins (idea.plugins.path):
+```
+~/Library/Application Support/<PRODUCT><VERSION>
+```
+  
+4. Logs (idea.log.path):
+```
+~/Library/Logs/<PRODUCT><VERSION>
+```
