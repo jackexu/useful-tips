@@ -57,3 +57,8 @@ rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
 ~/Library/Logs/<PRODUCT><VERSION>
 ```
+### How to install brew
+```
+rm -rf /usr/local/Cellar /usr/local/.git
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
