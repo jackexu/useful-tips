@@ -15,11 +15,11 @@ anaconda-clean --yes
 rm -rf ~/anaconda3
 rm -rf ~/.anaconda_backup
 ```
-3. remove from bash file
+3. remove from bash profile
 ```
 nano ~/.bash_profile
 ```
-delete following and then "control+x", then type "y", then "enter"
+delete following in the bash profile and then "control+x", then type "y", then "enter"
 ```
 # added by Anaconda3 5.2.0 installer
 export PATH="/Users/ody/anaconda3/bin:$PATH"
@@ -61,4 +61,8 @@ rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
 rm -rf /usr/local/Cellar /usr/local/.git
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+### If encounter rJava error in R, try following command; if not working, update java then retry
+```
+sudo R CMD javareconf
 ```
