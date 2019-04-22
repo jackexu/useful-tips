@@ -20,6 +20,7 @@ rm -rf ~/anaconda3
 rm -rf ~/.anaconda_backup
 ```
 3. remove from bash profile
+
 open bash profile by using following command
 ```
 nano ~/.bash_profile
@@ -71,11 +72,11 @@ sudo R CMD javareconf
 ```
 
 ### If encounter error like "# include <stdlib.h> when install any package in R" 
-1. install xcode-select
+1. install xcode in terminal
 ```
+install xcode-select
 ```
-
-2. If you already have xcode-select installed (receive below message after run above command)
+2. If you already have xcode installed (receive below message after run above command)
 ```
 error: command line tools are already installed, use "Software Update" to install updates
 ```
