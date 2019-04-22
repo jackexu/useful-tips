@@ -1,10 +1,14 @@
 # useful-tips
 
+For Mac user. Assume system is latest macOS Majave - 10.14
+
+## Python
+
 ### How to install tensorflow on Python 3.7:
 ```
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
-### How to remove Anaconda3
+### How to remove Anaconda3 completely
 1. remove config
 ```
 conda install anaconda-clean
@@ -37,7 +41,7 @@ rm -rf ~/Library/Receipts/io.continuum.pkg.anaconda.plist
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
 
-### How to remove PyCharm
+### How to remove PyCharm completely
 1. Configuration (idea.config.path):
 ```
 ~/Library/Preferences/<PRODUCT><VERSION>
@@ -57,12 +61,33 @@ rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
 ~/Library/Logs/<PRODUCT><VERSION>
 ```
+
+## R
+
+### If encounter rJava error in R, try following command; if not working, update java then retry
+```
+sudo R CMD javareconf
+```
+
+### If encounter error like "# include <stdlib.h> when install any package in R" 
+1. install xcode-select
+```
+```
+
+2. If you already have xcode-select installed (receive below message after run above command)
+```
+error: command line tools are already installed, use "Software Update" to install updates
+```
+then run following command (for macOS Mojave - 10.14), and install. 
+```
+open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+```
+It may happen again everytime you update your system.
+
+## HomeBrew
+
 ### How to install brew
 ```
 rm -rf /usr/local/Cellar /usr/local/.git
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-### If encounter rJava error in R, try following command; if not working, update java then retry
-```
-sudo R CMD javareconf
 ```
