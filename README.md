@@ -1,6 +1,6 @@
 # useful-tips
 
-For Mac user. Assume system is latest macOS Majave - 10.14
+For Mac user. Assume system is latest macOS Majave - 10.14 version
 
 ## Python
 
@@ -20,6 +20,7 @@ rm -rf ~/anaconda3
 rm -rf ~/.anaconda_backup
 ```
 3. remove from bash profile
+open bash profile by using following command
 ```
 nano ~/.bash_profile
 ```
