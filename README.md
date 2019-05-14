@@ -93,3 +93,14 @@ It may happen again everytime you update your system.
 rm -rf /usr/local/Cellar /usr/local/.git
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+### Have permission error when using brew
+
+run following command to fix:
+```
+sudo install -d -o $(whoami) -g admin /usr/local/Frameworks
+```
+### Install GraphViz
+
+```
+brew install graphviz
+```
