@@ -119,17 +119,15 @@ Go to https://www.roboti.us/license.html, and download file "getid_osx.dms" for 
 Running following to get the computer id:
 ```
 chmod 755 getid_osx.dms
-```
-```
 ./getid_osx.dms
 ```
 Then copy Your MuJoCo computer id to the web and submit - get the "mjkey.txt" and move it by running
 ```
-mv mjkey.txt /Users/Jacke/.mujoco/
+mv mjkey.txt ~/.mujoco/
 ```
 ### Pip3 install
 Then pip3 install it.
 ```
 pip3 install -U 'mujoco-py<2.1,>=2.0'
 ```
-
+You might need brew install gcc in order to pip3 install gym[all]
