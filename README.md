@@ -130,4 +130,15 @@ Then pip3 install it.
 ```
 pip3 install -U 'mujoco-py<2.1,>=2.0'
 ```
-You might need brew install gcc in order to pip3 install gym[all]
+If not working, run:
+```
+git clone https://github.com/openai/mujoco-py
+cd mujoco-py
+pip install -e . --no-cache
+```
+## Trouble install gym[all]
+Run above, and restart terminal after every step, then run
+```
+pip3 install gym[all]
+```
+Also, you might need brew install gcc in order to install it.
