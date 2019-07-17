@@ -104,3 +104,32 @@ sudo install -d -o $(whoami) -g admin /usr/local/Frameworks
 ```
 brew install graphviz
 ```
+## MuJoCo
+
+### Download the files
+Download "mujoco200_macos.zip" from https://www.roboti.us/index.html and rename to "mujoco200.zip".
+Unzip it to the directory:
+```
+unzip mujoco200.zip -d ~/.mujoco/
+```
+
+### get the key file:
+
+Go to https://www.roboti.us/license.html, and download file "getid_osx.dms" for mac.
+Running following to get the computer id:
+```
+chmod 755 getid_osx.dms
+```
+```
+./getid_osx.dms
+```
+Then copy Your MuJoCo computer id to the web and submit - get the "mjkey.txt" and move it by running
+```
+mv mjkey.txt /Users/Jacke/.mujoco/
+```
+### Pip3 install
+Then pip3 install it.
+```
+pip3 install -U 'mujoco-py<2.1,>=2.0'
+```
+
