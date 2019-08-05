@@ -1,13 +1,23 @@
 # useful-tips
 
-For Mac user. Assume system is latest macOS Majave - 10.14 version
+For Mac user with latest macOS Majave - 10.14 version
 
 ## Python
+
+### Set alias for python and pip
+open bash_profile by running `nano /.bash_profile`
+add following
+```
+alias python='python3'
+alias pip='pip3'
+```
+then use control+X to exit and type Enter twice to save it.
 
 ### How to install tensorflow on Python 3.7:
 ```
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
+
 ### How to remove Anaconda3 completely
 1. remove config
 ```
@@ -104,16 +114,23 @@ sudo install -d -o $(whoami) -g admin /usr/local/Frameworks
 ```
 brew install graphviz
 ```
-## MuJoCo
+## Install Gym
+sometimes couldn't run `pip intsall gym[all]`
 
-### Download the files
+### Solution 1
+run `pip install gym[atari]` instead
+
+### Solution 2
+Install MuJoCo first (not recommended unless have to install gym[all])
+
+#### Download the files
 Download "mujoco200_macos.zip" from https://www.roboti.us/index.html and rename to "mujoco200.zip".
 Unzip it to the directory:
 ```
 unzip mujoco200.zip -d ~/.mujoco/
 ```
 
-### get the key file:
+#### get the key file:
 
 Go to https://www.roboti.us/license.html, and download file "getid_osx.dms" for mac.
 Running following to get the computer id:
@@ -125,7 +142,7 @@ Then copy Your MuJoCo computer id to the web and submit - get the "mjkey.txt" an
 ```
 mv mjkey.txt ~/.mujoco/
 ```
-### Pip3 install
+#### Pip3 install
 Then pip3 install it.
 ```
 pip3 install -U 'mujoco-py<2.1,>=2.0'
