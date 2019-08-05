@@ -121,16 +121,15 @@ sometimes couldn't run `pip intsall gym[all]`
 run `pip install gym[atari]` instead
 
 ### Solution 2
-Install MuJoCo first (not recommended unless have to install gym[all])
+Install MuJoCo first (not recommended unless have to install gym[all]) then install it. Run following, and restart terminal after every step, 
 
-#### Download the files
+#### Download MuJoCo files
 Download "mujoco200_macos.zip" from https://www.roboti.us/index.html and rename to "mujoco200.zip".
 Unzip it to the directory:
 ```
 unzip mujoco200.zip -d ~/.mujoco/
 ```
-
-#### get the key file:
+#### Get the key file:
 
 Go to https://www.roboti.us/license.html, and download file "getid_osx.dms" for mac.
 Running following to get the computer id:
@@ -142,8 +141,7 @@ Then copy Your MuJoCo computer id to the web and submit - get the "mjkey.txt" an
 ```
 mv mjkey.txt ~/.mujoco/
 ```
-#### Pip3 install
-Then pip3 install it.
+#### Install MuJoCo
 ```
 pip3 install -U 'mujoco-py<2.1,>=2.0'
 ```
@@ -153,9 +151,8 @@ git clone https://github.com/openai/mujoco-py
 cd mujoco-py
 pip install -e . --no-cache
 ```
-## Trouble install gym[all]
-Run above, and restart terminal after every step, then run
+#### Install gym[all] again
 ```
 pip3 install gym[all]
 ```
-Also, you might need brew install gcc in order to install it.
+Also, you might need `brew install gcc` in order to install it.
