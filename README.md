@@ -156,3 +156,22 @@ pip install -e . --no-cache
 pip3 install gym[all]
 ```
 Also, you might need `brew install gcc` in order to install it.
+
+## RCC
+login method for midway 2 or Hadoop
+```
+ssh -Y <user>@midway2.rcc.uchicago.edu
+ssh -Y <user>@hadoop.rcc.uchicago.edu
+```
+
+Find/change enviorment and install package
+```
+module avail python
+module load Anaconda3/2019.03 
+pip install --user seaborn
+```
+
+Run sbatch file and check job status
+```
+sbatch run.sbatch
+squeue --user=<username>
