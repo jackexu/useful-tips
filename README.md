@@ -2,7 +2,7 @@
 
 For Mac user with latest macOS Majave - 10.14 version
 
-## Python
+# **Python**
 
 ### Set alias for python and pip
 open bash_profile by running `nano /.bash_profile`
@@ -74,7 +74,7 @@ rm -rf ~/.condarc ~/.conda ~/.continuum
 ~/Library/Logs/<PRODUCT><VERSION>
 ```
 
-## R
+# **R**
 
 ### If encounter rJava error in R, try following command; if not working, update java then retry
 ```
@@ -96,7 +96,7 @@ open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10
 ```
 It may happen again everytime you update your system.
 
-## HomeBrew
+# **HomeBrew**
 
 ### How to install brew
 ```
@@ -114,13 +114,13 @@ sudo install -d -o $(whoami) -g admin /usr/local/Frameworks
 ```
 brew install graphviz
 ```
-## Install Gym
+# **Install Gym**
 sometimes couldn't run `pip intsall gym[all]`
 
-### Solution 1
+### *Solution 1*
 run `pip install gym[atari]` instead
 
-### Solution 2
+### *Solution 2*
 Install MuJoCo first (not recommended unless have to install gym[all]) then install it. Run following, and restart terminal after every step, 
 
 #### Download MuJoCo files
@@ -157,7 +157,7 @@ pip3 install gym[all]
 ```
 Also, you might need `brew install gcc` in order to install it.
 
-## RCC
+# **RCC**
 login method for midway 2 or Hadoop
 ```
 ssh -Y <user>@midway2.rcc.uchicago.edu
