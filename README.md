@@ -18,6 +18,13 @@ then use control+X to exit and type Enter twice to save it.
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
+### If encounter SSL certificate problem
+Error like when using Keras Mnist dataset:
+```
+Exception: URL fetch failure on https://s3.amazonaws.com/img-datasets/mnist.npz : None -- [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1056)
+```
+Go to Finder -> Go -> Go to Folder -> Type "/Applications/Python 3.7" -> Double click "Install Certificates.command" to run.
+
 ### How to remove Anaconda3 completely
 1. remove config
 ```
