@@ -18,6 +18,14 @@ then use control+X to exit and type Enter twice to save it.
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
+### XCRUN error or command 'gcc' failed:
+Sample error:
+```
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+  error: command 'gcc' failed with exit status 1
+```
+Please run `xcode-select --install` in terminal
+
 ### If encounter SSL certificate problem
 Error like when using Keras Mnist dataset:
 ```
