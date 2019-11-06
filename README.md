@@ -34,6 +34,17 @@ Exception: URL fetch failure on https://s3.amazonaws.com/img-datasets/mnist.npz 
 ```
 Go to Finder -> Go -> Go to Folder -> Type "/Applications/Python 3.7" -> Double click "Install Certificates.command" to run.
 
+### OpenMP issue
+Error like *It seems that scikit-learn cannot be built with OpenMP support.* or
+```
+    compile options: '-c'
+    extra options: '-fopenmp'
+    gcc: test_openmp.c
+    clang: error: unsupported option '-fopenmp'
+```
+
+Use Brew install libomp.
+
 ### How to remove Anaconda3 completely
 1. remove config
 ```
