@@ -43,7 +43,15 @@ Error like *It seems that scikit-learn cannot be built with OpenMP support.* or
     clang: error: unsupported option '-fopenmp'
 ```
 
-Use Brew install libomp.
+Use *brew install libomp* and add following into bash_profile
+```
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
+export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
+export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
+export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
+```
 
 ### How to remove Anaconda3 completely
 1. remove config
