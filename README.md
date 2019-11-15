@@ -1,6 +1,6 @@
-# useful-tips
+# Solution for strange-bug in Data Science Coding
 
-For Mac user with latest macOS Majave - 10.14 version
+For Mac user with latest macOS Majave - 10.14 or higher version
 
 # **Python**
 
