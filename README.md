@@ -18,6 +18,16 @@ then use control+X to exit and type Enter twice to save it.
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
+### Unable to install Keras on Python 3.8
+Error meassage like below is due to unupdated h5py package (they haven't make any update for 3.8)
+```
+error: dlopen(libhdf5.dylib, 6): image not found
+```
+Solution is to build this package manually: Download the file from [wheels.scipy.org](wheels.scipy.org), cd to Download folder and run below
+```
+pip install h5py-2.10.0-cp38-cp38-macosx_10_9_x86_64.whl
+```
+
 ### XCRUN error or command 'gcc' failed:
 Sample error:
 ```
