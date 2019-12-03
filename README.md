@@ -18,6 +18,26 @@ then use control+X to exit and type Enter twice to save it.
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
+### How to Suppress warnings in Python:
+```
+import sys
+if not sys.warnoptions:
+    import warnings
+    warnings.simplefilter("ignore")
+```
+
+### How to Suppress Tensorflow warnings:
+#### For warning like "Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA"
+```
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+```
+#### For Tensorflow deprecated warnings:
+```
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+```
+
 ### Unable to install Keras on Python 3.8
 Error meassage like below is due to unupdated h5py package (they haven't make any update for 3.8)
 ```
