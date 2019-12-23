@@ -39,11 +39,11 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 ```
 
 ### Unable load model in Flask for Tensorflow 2.0 and Keras 2.3
-Error meassage like below will cuase a HTTP 500 Internal error when apply model in Flask
+Error meassage like below will cuase a *HTTP 500 Internal Server Error* when apply model in Flask
 ```
-'thread._local' object has no attribute 'value' error
+AttributeError: '_thread._local' object has no attribute 'value'
 ```
-Solution is to use below instead of import from Keras.models
+Solution is to use below; instead of *import from Keras.models*
 ```
 from tensorflow.keras.models import load_model
 ```
