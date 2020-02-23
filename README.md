@@ -4,19 +4,24 @@ For Mac user with latest macOS Majave - 10.14 or higher version
 
 # **Python**
 
+## Python settings problem
+
 ### Set alias for python and pip
-open bash_profile by running `nano /.bash_profile`
-add following
+
+First, check if you are using bash or zsh: `echo $0`
+
+Second, add following to the corresponding bash profile bewlow
 ```
 alias python='python3'
 alias pip='pip3'
 ```
 then use control+X to exit and type Enter twice to save it.
 
-### How to install tensorflow on Python 3.7:
-```
-pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
-```
+#### For zsh (default in macOS Catalina)
+open profile by running `$HOME/.zshrc`
+
+#### For bash (default in macOS 10.14 and before)
+open bash_profile by running `nano /.bash_profile`
 
 ### How to Suppress warnings in Python:
 ```
@@ -38,14 +43,35 @@ import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 ```
 
-### Unable load model in Flask for Tensorflow 2.0 and Keras 2.3
-Error meassage like below will cuase a *HTTP 500 Internal Server Error* when apply model in Flask
+## Python common installation problem
+
+### Unable to install xgboost 
+
+Common xgboost installation issue:
+
 ```
-AttributeError: '_thread._local' object has no attribute 'value'
+XGBoostLibraryNotFound: Cannot find XGBoost Library in the candidate path, did you install compilers and run build.sh in root path?
+    List of candidates:
+    ...
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
 ```
-Solution is to use below; instead of *import from Keras.models*
+
+Solution to above is using brew install first and then manually build the package
+
 ```
-from tensorflow.keras.models import load_model
+brew install xgboost
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost
+mkdir lib
+cd lib
+ln -s /usr/local/Cellar/xgboost/0.90/lib/libxgboost.dylib ./libxgboost.dylib
+cd ../python-package
+python3 setup.py install
+```
+
+### How to install tensorflow on Python 3.7:
+```
+pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
 ### Unable to install Keras on Python 3.8
@@ -57,6 +83,8 @@ Solution is to build this package manually: Download the file from [wheels.scipy
 ```
 pip install h5py-2.10.0-cp38-cp38-macosx_10_9_x86_64.whl
 ```
+
+## Python common issues 
 
 ### XCRUN error or command 'gcc' failed:
 Sample error:
@@ -92,6 +120,18 @@ export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
 export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
 export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
 ```
+
+### Unable load model in Flask for Tensorflow 2.0 and Keras 2.3
+Error meassage like below will cuase a *HTTP 500 Internal Server Error* when apply model in Flask
+```
+AttributeError: '_thread._local' object has no attribute 'value'
+```
+Solution is to use below; instead of *import from Keras.models*
+```
+from tensorflow.keras.models import load_model
+```
+
+## Python IDE problem
 
 ### How to remove Anaconda3 completely
 1. remove config
