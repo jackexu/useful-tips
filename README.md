@@ -1,4 +1,6 @@
-# Solution for strange-bug in Data Science Coding
+# Solution for uncommon bugs in Python and R 
+
+**Data Science Coding**
 
 For Mac user with latest macOS Majave - 10.14 or higher version
 
