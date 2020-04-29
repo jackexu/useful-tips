@@ -76,7 +76,7 @@ python3 setup.py install
 pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 ```
 
-### Unable to install Keras on Python 3.8
+### Unable to install Keras on Python 3.8 - looks like they solved now
 Error meassage like below is due to unupdated h5py package (they haven't make any update for 3.8)
 ```
 error: dlopen(libhdf5.dylib, 6): image not found
