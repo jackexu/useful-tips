@@ -17,13 +17,13 @@ Second, add following to the corresponding bash profile bewlow
 alias python='python3'
 alias pip='pip3'
 ```
-then use control+X to exit and type Enter twice to save it.
+then use control+X to exit and type Y/Enter twice to save it.
 
 #### For zsh (default in macOS Catalina)
-open profile by running `$HOME/.zshrc`
+open profile by running `nano ~/.zshrc`
 
 #### For bash (default in macOS 10.14 and before)
-open bash_profile by running `nano /.bash_profile`
+open bash_profile by running `nano ~/.bash_profile`
 
 ### How to Suppress warnings in Python:
 ```
@@ -152,11 +152,13 @@ open bash profile by using following command
 ```
 nano ~/.bash_profile
 ```
-delete following in the bash profile and then "control+x", then type "y", then "enter"
+delete following in the bash profile
 ```
 # added by Anaconda3 5.2.0 installer
 export PATH="/Users/ody/anaconda3/bin:$PATH"
 ```
+then "control+x", then type "y", then "enter"
+
 4. remove hidden files
 ```
 rm -rf ~/Library/Receipts/io.continuum.pkg.anaconda-client.bom
