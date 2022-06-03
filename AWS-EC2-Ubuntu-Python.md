@@ -26,6 +26,7 @@ sudo update-alternatives --config python3
 ```
 
 ## apt_pkg issue
+fix 'ModuleNotFoundError: No module named 'apt_pkg'
 ```
 ll cd /usr/lib/python3/dist-packages/apt_pkg.cpython*
 # Copy from output above
