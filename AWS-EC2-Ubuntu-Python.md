@@ -2,7 +2,7 @@
 
 Recommend Manual Way
 ```
-udo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 
 wget https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz
 
@@ -20,7 +20,7 @@ make
 
 sudo make altinstall
 
-sudo ldconfig /opt/Python-3.9.13
+cd && sudo ldconfig /opt/Python-3.9.13
 
 python3.9 --version
 ```
