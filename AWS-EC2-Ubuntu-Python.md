@@ -50,3 +50,5 @@ Then do `sudo apt install python3-pip`
 Then log out then log back in
 
 Then run `pip3 install pipenv`
+
+Upgrade by running `python3.9 -m pip install --upgrade pip`
