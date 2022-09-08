@@ -1,28 +1,37 @@
 # Install Python 3.9.13
 
-Run codes 
+Recommend Manual Way
 ```
-sudo apt update && sudo apt upgrade
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt update
-sudo apt install python3.9 -y
+udo apt update && sudo apt upgrade
+
+wget https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz
+
+tar -xf Python-3.9.13.tar.xz
+
+sudo mv Python-3.9.13 /opt/
+
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev pkg-config make -y
+
+cd /opt/Python-3.9.13/
+
+./configure --enable-optimizations --enable-shared
+
+make
+
+sudo make altinstall
+
+sudo ldconfig /opt/Python-3.9.13
+
 python3.9 --version
-sudo apt install python3.9-dev -y
-sudo apt install python3.9-venv -y
-sudo apt install python3.9-distutils -y
-sudo apt install python3.9-lib2to3 -y
-sudo apt install python3.9-gdbm -y
-sudo apt install python3.9-tk -y
-sudo apt install python3.9-apt -y
 ```
 
 ## Set Python 3.9.13 as default
 ```
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.9 1
+sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.9 1
 
 sudo update-alternatives --config python3
+sudo update-alternatives --config python
 ```
 
 ## apt_pkg issue
